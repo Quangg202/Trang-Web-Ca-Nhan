@@ -1,4 +1,3 @@
-index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +7,18 @@ index.html
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
     <title>Trang Web Cá Nhân</title>
+    <style>
+        body.black-bg {
+            background-color: black; 
+            color: white; 
+        }
+        body.black-bg h2, body.black-bg p, body.black-bg li {
+            color: white; 
+        }
+        .hidden {
+            display: none; 
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -16,26 +27,27 @@ index.html
                 Lê Ngọc <span>Quang</span>
             </div>
             <div class="links">
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#">Home</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#">About</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#">Skills</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#">Services</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#">Contact</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#home" onclick="showSection('home')">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#about" onclick="showSection('about')">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#skills" onclick="showSection('skills')">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#services" onclick="showSection('services')">Services</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#contact" onclick="showSection('contact')">Contact</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
         </div>
-        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
-    </div>
         <div class="dropdown">
             <div class="links">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Skills</a>
-                <a href="#">Service</a>
-                <a href="#">Contact</a>
+                <a href="#home" onclick="showSection('home')">Home</a>
+                <a href="#about" onclick="showSection('about')">About</a>
+                <a href="#skills" onclick="showSection('skills')">Skills</a>
+                <a href="#services" onclick="showSection('services')">Services</a>
+                <a href="#contact" onclick="showSection('contact')">Contact</a>
                 <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
             </div>
         </div>
     </nav>
-    <section>
+    
+    <section id="home">
         <div class="main-container">
             <div class="image" data-aos="zoom-out" data-aos-duration="3000">
                 <img src="unnamed-fotor-bg-remover-20241029122147 (1).png" alt="">
@@ -45,20 +57,65 @@ index.html
                 <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">Tôi là một <span class="typewriter-text"></span><label for="">|</label></div>
                 <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">Xin chào, tôi là Lê Ngọc Quang, một lập trình viên, nhà thiết kế đam mê công nghệ với hơn 2 năm kinh nghiệm trong lĩnh vực phát triển web. Với nền tảng vững chắc về các ngôn ngữ lập trình như HTML, CSS, JavaScript và các framework hiện đại như React, Angular, tôi đã tham gia vào nhiều dự án phát triển ứng dụng web đa dạng, từ các trang web doanh nghiệp đến các nền tảng thương mại điện tử.</p>
                 <div class="social-links">
-                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://github.com/Quangg202" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100081294302733&mibextid=LQQJ4d" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@quengg02_?_t=8qyW4lgGMYq&_r=1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://x.com/quengg8" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600"><i class="fa-brands fa-twitter"></i></a>              
                 </div>
                 <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
-                    <button>Hire me</button>
+                    <a href="mailto:https://mail.google.com/mail/u/0/?ogbl#inbox"><button>Hire me</button></a>
                 </div>
             </div>
         </div>
     </section>
+
+    <section id="about" class="hidden">
+        <h2 data-aos="fade-up" data-aos-duration="1500">About Me</h2>
+        <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">Tôi là một lập trình viên với niềm đam mê về công nghệ và thiết kế. Tôi thích khám phá các công nghệ mới và áp dụng chúng vào công việc của mình để tạo ra các sản phẩm chất lượng,Trong suốt quá trình học tập và làm việc, tôi đã phát triển kỹ năng vững chắc trong các ngôn ngữ lập trình như HTML, CSS, JavaScript, và Python. Tôi cũng có kinh nghiệm làm việc với các framework như React và Django, giúp tôi xây dựng các ứng dụng web động và hiệu quả,Tôi luôn tìm kiếm cơ hội để kết nối và hợp tác với những người cùng đam mê công nghệ. Nếu bạn đang tìm kiếm một lập trình viên sáng tạo và nhiệt huyết, đừng ngần ngại liên hệ với tôi!</p>
+    </section>
+
+    <section id="skills" class="hidden">
+        <h2 data-aos="fade-up" data-aos-duration="1500">My Skills</h2>
+        <ul data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+            <li>HTML, CSS, JavaScript</li>
+            <li>React, Angular</li>
+            <li>Python, Django</li>
+            <li>Responsive Web Design</li>
+            <li>Version Control (Git)</li>
+        </ul>
+    </section>
+
+    <section id="services" class="hidden">
+        <h2 data-aos="fade-up" data-aos-duration="1500">Services</h2>
+        <div class="service" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+            <h3>Web Development</h3>
+            <p>Xây dựng và phát triển các trang web chất lượng.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="hidden">
+        <h2 data-aos="fade-up" data-aos-duration="1500">Contact Me</h2>
+        <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">Bạn có thể liên hệ với tôi qua email : <a href="mailto:example@example.com">https://mail.google.com/mail/u/0/#inbox</a></p>
+    </section>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init({offset:0});
+        AOS.init({offset:0});
+
+        function showSection(sectionId) {
+            
+            document.body.classList.add('black-bg');
+
+            
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.add('hidden');
+            });
+
+            
+            const activeSection = document.getElementById(sectionId);
+            activeSection.classList.remove('hidden');
+        }
     </script>
     <script src="script.js"></script>
 </body>
