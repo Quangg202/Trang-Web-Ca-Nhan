@@ -283,6 +283,30 @@ section{
     }
 }
 
+.exit-btn {
+    background-color: #077b32;
+    color: white;
+    padding: 10px 20px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: fit-content;
+}
+.exit-btn:hover {
+    background-color: #077b32;
+}
+
+.footer-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
 
 
 

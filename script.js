@@ -8,7 +8,6 @@ function cancel(){
     navbar.style.transform = "translateY(-500px)"
 }
 
-// Typewriter Effect
 
 const texts = [
     "Lập Trình Viên",
@@ -45,3 +44,17 @@ function eraseText(){
 }
 
 window.onload = typeWriter
+
+AOS.init({offset:0});
+
+function showSection(sectionId) {
+    document.body.classList.add('black-bg');
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => section.classList.add('hidden'));
+    const activeSection = document.getElementById(sectionId);
+    activeSection.classList.remove('hidden');
+}
+
+function exitToGroupPage() {
+    window.location.href = "https://quangg202.github.io/Trang-Chu/"; 
+}
