@@ -56,5 +56,5 @@ function showSection(sectionId) {
 }
 
 function exitToGroupPage() {
-    window.location.href = "https://quangg202.github.io/Trang-Chu/"; 
+    window.location.href = "https://nganngan0210.github.io/kngannn/btapweb.html"; 
 }
